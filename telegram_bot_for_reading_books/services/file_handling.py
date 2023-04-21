@@ -22,12 +22,6 @@ def _get_part_text(text: str, start: int, size: int) -> tuple[str, int]:
     return text, len(text)
 
 
-# Функция, формирующая словарь книги
-# Не удаляйте эти объекты - просто используйте
-book: dict[int, str] = {}
-PAGE_SIZE = 1050
-
-
 # Дополните эту функцию, согласно условию задачи
 def prepare_book(path: str) -> None:
     with open(path, 'r', encoding='utf-8') as f:
