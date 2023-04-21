@@ -1,7 +1,9 @@
+from copy import deepcopy
+
 from aiogram import Router
 from aiogram.filters import Command, CommandStart, Text
 from aiogram.types import CallbackQuery, Message
-from copy import deepcopy
+
 from database.database import user_dict_template, users_db
 from filters.filters import IsDelBookmarkCallbackData, IsDigitCallbackData
 from keyboards.bookmarks_kb import (create_bookmarks_keyboard,
@@ -110,7 +112,7 @@ async def process_backward_press(callback: CallbackQuery):
 async def process_page_press(callback: CallbackQuery):
     users_db[callback.from_user.id]['bookmarks'].add(
         users_db[callback.from_user.id]['page'])
-    await callback.answer('append_bookmarks')
+    await callback.answer(LEXICON['append_bookmarks'])
 
 
 # Этот хэндлер будет срабатывать на нажатие инлайн-кнопки
