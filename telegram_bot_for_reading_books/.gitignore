@@ -4,3 +4,10 @@
 .vscode/
 venv/
 __pycache__/
+/database/users.db
+/bot_test.py
+/.idea/misc.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/telegram_bot_for_reading_books.iml
+/.idea/vcs.xml
+/.idea/workspace.xml
